@@ -1,0 +1,241 @@
+/* ===== GLOBAL ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0f0f0f;
+    color: #eaeaea;
+}
+
+/* ===== LAYOUT ===== */
+.app {
+    display: flex;
+    height: 100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 260px;
+    background: #171717;
+    border-right: 1px solid #2a2a2a;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h3 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    color: #4caf50;
+    text-align: center;
+}
+
+.sidebar button {
+    background: #2e7d32;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 15px;
+    transition: background 0.3s;
+}
+
+.sidebar button:hover {
+    background: #388e3c;
+}
+
+#history {
+    flex: 1;
+    overflow-y: auto;
+    font-size: 13px;
+}
+
+#history div {
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    background: #1f1f1f;
+    cursor: pointer;
+}
+
+#history div:hover {
+    background: #2a2a2a;
+}
+
+/* ===== CHAT AREA ===== */
+.chat-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #0f0f0f;
+}
+
+/* ===== CHAT BOX ===== */
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* ===== MESSAGES ===== */
+.message {
+    max-width: 75%;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    animation: fadeIn 0.2s ease-in;
+}
+
+.user {
+    background: #1e88e5;
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: 3px;
+}
+
+.bot {
+    background: #1e1e1e;
+    color: #eaeaea;
+    align-self: flex-start;
+    border-bottom-left-radius: 3px;
+    border: 1px solid #2a2a2a;
+}
+
+/* ===== INPUT AREA ===== */
+.input-area {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #2a2a2a;
+    background: #121212;
+}
+
+.input-area input {
+    flex: 1;
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 12px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-area input::placeholder {
+    color: #aaa;
+}
+
+.input-area button {
+    margin-left: 10px;
+    padding: 12px 20px;
+    background: #4caf50;
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.input-area button:hover {
+    background: #66bb6a;
+}
+/* ===== HISTORY SECTION ===== */
+.sidebar h4 {
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+#history {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Individual chat item */
+#history .history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    border-radius: 6px;
+    background: #1e1e1e;
+    border: 1px solid #2a2a2a;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Hover effect */
+#history .history-item:hover {
+    background: #2a2a2a;
+    transform: translateX(2px);
+}
+
+/* Chat title text */
+/* ===== HISTORY BOLD LOOK ===== */
+#history .history-item span {
+    font-weight: 600;        /* bold */
+    letter-spacing: 0.3px;  /* thoda premium feel */
+    color: #f1f1f1;
+}
+
+
+/* Delete button */
+#history .history-item button {
+    background: transparent;
+    border: none;
+    color: #ff5252;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 2px;
+    transition: transform 0.2s ease;
+}
+/* ===== HISTORY TITLE HIGHLIGHT ===== */
+.sidebar h4 {
+    font-weight: 800;
+    font-size: 22px;        /* 👈 size increase */
+    color: #66ff99;
+    text-shadow: 0 0 8px rgba(102, 255, 153, 0.7);
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+
+#history .history-item button:hover {
+    transform: scale(1.2);
+}
+
+/* Scrollbar for history */
+#history::-webkit-scrollbar {
+    width: 6px;
+}
+
+#history::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 3px;
+}
+
+#history::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

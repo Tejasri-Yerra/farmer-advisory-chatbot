@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Farmer Advisory Chatbot</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- ===== SIDEBAR ===== -->
+    <div class="sidebar">
+        <h3>🌾 Farmer Bot</h3>
+
+        <button onclick="newChat()">➕ New Chat</button>
+
+        <h4 style="margin:10px 0; font-size:14px; color:#aaa;">History</h4>
+        <div id="history"></div>
+    </div>
+
+    <!-- ===== CHAT AREA ===== -->
+    <div class="chat-area">
+
+        <div id="chat" class="chat-box">
+            <div class="message bot">
+                👋 Welcome to Farmer Advisory Chatbot.<br>
+                Ask about crops, kharif, rabi, soil, irrigation.
+            </div>
+        </div>
+
+        <!-- ===== INPUT AREA ===== -->
+        <div class="input-area">
+            <button onclick="startVoice()" title="Voice Input" style="margin-right:8px;">
+                🎤
+            </button>
+
+            <input
+                type="text"
+                id="userInput"
+                placeholder="Ask your farming question..."
+                onkeydown="handleEnter(event)"
+            >
+
+            <button onclick="sendMessage()">Send</button>
+        </div>
+
+    </div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
