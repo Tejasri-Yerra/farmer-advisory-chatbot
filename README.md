@@ -24,7 +24,51 @@ The **Farmer Advisory Chatbot** allows users to:
 ---
 
 ## 🚀 How Users Can Get Started
+Ensure Python 3.x is installed.
+Install required packages:
+pip install flask
+Run the Flask backend server:
+python app.py
+Open your browser and navigate to:
+http://127.0.0.1:5000
+Start chatting with the Farmer Advisory Chatbot.
 
-1. **Clone or download the project repository**  
-   ```bash
-   git clone https://github.com/your-username/farmer-advisory-chatbot.git
+---
+
+## **Tech Stack**
+
+* **Frontend:** HTML, CSS, JavaScript  
+* **Backend:** Python Flask  
+* **Data Storage:** Browser `localStorage` for chat history  
+* **Voice Input:** Web Speech API (`webkitSpeechRecognition`)  
+* **Version Control:** Git + GitHub  
+
+---
+
+## **💬 Sample Dialogues**
+
+User: What are Kharif crops?
+Bot: Kharif crops are sown during the monsoon season (June–July) and harvested in September–October. Examples include rice, maize, cotton, and soybean.
+
+User: My wheat plants need irrigation, how much water?
+Bot: Wheat requires around 450–650 mm of water during its growth period. Proper scheduling prevents water stress.
+
+User: How can I improve soil fertility?
+Bot: Use organic compost, practice crop rotation, and apply green manure to maintain healthy soil.
+
+User: Unknown question example
+Bot: Thank you for your question 🌱. Currently, I don’t have an exact answer. Please ask another farming-related question.
+
+## Project Screenshots
+
+### Frontend
+![Frontend Screenshot](images/frontend.png)
+
+### Website View
+![Website Screenshot](images/website.png)
+
+### Backend
+![Backend Screenshot](images/backend.png)
+
+### Conversation Flow Diagram
+![Flow Diagram](images/flowdiagram.png)
